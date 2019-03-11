@@ -3,17 +3,16 @@
   tasks:
   - name: Edit Sources list for things like chrome, vs code, etc
     apt_repository:
-        repo: "{{ repo }}"
+        repo: "{{ item }}"
         state: present
-    vars:
-        repo:
-            - deb http://ppa.launchpad.net/papirus/papirus/ubuntu bionic main
-            # - deb http://ppa.launchpad.net/tista/adapta/ubuntu bionic main
-            # - deb http://ppa.launchpad.net/agornostal/ulauncher/ubuntu bionic main
-            # - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-            # - deb https://repo.nordvpn.com/deb/nordvpn/debian stable main
-            # - deb http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic main
-            # - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
-            # - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+    loop:
+    - deb http://ppa.launchpad.net/papirus/papirus/ubuntu bionic main
+     - deb http://ppa.launchpad.net/tista/adapta/ubuntu bionic main
+     - deb http://ppa.launchpad.net/agornostal/ulauncher/ubuntu bionic main
+     - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+     - deb https://repo.nordvpn.com/deb/nordvpn/debian stable main
+     - deb http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic main
+     - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+     - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
     become: true
     become_user: milnejam
