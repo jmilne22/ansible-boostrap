@@ -1,0 +1,16 @@
+--- # Install basic packages pretty much required for the system to function
+- hosts: computers
+  tasks:
+  - name: Install Basic pacakges needed for the system to function
+    apt:
+      name: "{{ packages }}"
+    vars:
+        packages:
+            - curl
+            - git
+            - tree
+            - vim
+            - gcc
+            - build-essential
+    become: true
+    become_user: milnejam

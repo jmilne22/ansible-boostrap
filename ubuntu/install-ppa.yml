@@ -1,0 +1,12 @@
+--- # Add PPA'
+- hosts: computers
+  become: yes
+  tasks:
+  -name: Install ppa's
+  apt:
+      name: "{{ ppa }}"
+  vars:
+      ppa:
+          - ppa:papirus/papirus
+          - ppa:tista/adapta
+          - ppa:agornostal/ulauncher

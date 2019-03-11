@@ -1,0 +1,40 @@
+--- # Install Packages
+- hosts: computers
+  become: yes
+  tasks:
+  - name: Install packages
+  apt:
+      - name: "{{ packages }}"
+  vars:
+      packages:
+          - steam
+          - fonts-powerline
+          - fonts-hack-ttf
+          - arc-theme
+          - chrome-gnome-shell
+          - gnome-tweak-tool
+          - adapta-gtk-theme
+          - neofetch
+          - streamlink
+          - mpv
+          - vlc
+          - docker.io
+          - nautilus-dropbox
+          - zsh
+          - ulauncher
+          - telegram-desktop
+          - papirus-icon-theme
+          - code
+          - google-chrome-stable
+          - nordvpn
+          - slack
+
+- name: Install deb packages from the internet
+  apt:
+    - name: "{{ deb_url }}"
+  vars:
+    deb_url:
+    - https://discordapp.com/api/download?platform=linux&format=deb
+
+- name: Install communitheme via snap
+  command: sudo snap install communitheme
