@@ -1,0 +1,46 @@
+--- # Install Packages
+- hosts: computers
+  tasks:
+  - name: Install deb packages from the internet
+    apt:
+      deb: "{{ item }}"
+    vars:
+    loop:
+      - https://discordapp.com/api/download?platform=linux&format=deb
+      - https://github.com/VSCodium/vscodium/releases/download/1.32.1/vscodium_1.32.1-1552067474_amd64.deb
+      - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - https://downloads.vivaldi.com/stable/vivaldi-stable_2.3.1440.60-1_amd64.deb
+      - https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.7-amd64.deb
+      - https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
+  - name: Update cache
+    apt:
+      update_cache: yes
+      cache_valid_time: 86400
+  # - name: Install packages
+  #   apt:
+  #     name: "{{ packages }}"
+  #   vars:
+  #       packages:
+  #         - steam
+  #         - fonts-powerline
+  #         - fonts-hack-ttf
+  #         - arc-theme
+  #         - chrome-gnome-shell
+  #         - gnome-tweak-tool
+  #         # - adapta-gtk-theme
+  #         - neofetch
+  #         - streamlink
+  #         - mpv
+  #         - vlc
+  #         - docker.io
+  #         - nautilus-dropbox
+  #         - zsh
+  #         # - ulauncher
+  #         - telegram-desktop
+  #         # - papirus-icon-theme
+  #         - nordvpn
+
+  # - name: Install communitheme snap
+  #   command: snap install communitheme
+  become: true
+  become_user: milnejam
