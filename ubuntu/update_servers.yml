@@ -1,0 +1,10 @@
+--- # Update ubuntu system, essentially does apt update && apt upgrade
+- hosts: computers
+  tasks:
+  - name: Update Ubuntu System
+    apt:
+      upgrade: dist
+      update_cache: yes
+      cache_valid_time: 86400
+  become: true
+  become_user: milnejam
