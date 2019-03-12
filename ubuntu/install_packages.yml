@@ -22,6 +22,9 @@
           - zsh
           - ulauncher
           - telegram-desktop
+          - adapta-gtk-theme
           - papirus-icon-theme
-          - nordvpn
+
+  - name: Install communitheme, spotify snap
+    command: snap install communitheme spotify
   become: true

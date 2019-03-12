@@ -2,8 +2,9 @@
 - hosts: computer
   name: Run all playbooks to set up ubuntu system
 
-# - import_playbook: ubuntu/install_basic_packages.yml
-# =- import_playbook: ubuntu/update_sources.yml
-# - import_playbook: ubuntu/update_servers.yml
+- import_playbook: ubuntu/install_basic_packages.yml
+- import_playbook: ubuntu/install_ppas.yml
+- import_playbook: ubuntu/install_debs.yml
+- import_playbook: ubuntu/update_servers.yml
 - import_playbook: ubuntu/install_packages.yml
 # - import_playbook: ubuntu/configure_docker.yml
