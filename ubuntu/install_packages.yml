@@ -17,7 +17,6 @@
           - streamlink
           - mpv
           - vlc
-          - docker.io
           - nautilus-dropbox
           - zsh
           - ulauncher
