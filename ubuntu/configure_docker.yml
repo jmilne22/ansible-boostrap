@@ -2,8 +2,7 @@
 - hosts: computers
   tasks:
   - name: Add $USER to docker group
-    user: $USER
-    apped: yes
-    group: docker
-    
+    user:
+      name: milnejam
+      group: docker
   become: yes
