@@ -1,9 +1,9 @@
 --- # Update ubuntu servers
 - hosts: computers
   remote_user: milnejam
-  become: yes
   tasks:
       - name: update the cache
         apt: update_cache=yes
       - name: update the machine
         apt: upgrade=dist
+  become: yes

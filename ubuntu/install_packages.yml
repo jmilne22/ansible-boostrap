@@ -43,4 +43,3 @@
   # - name: Install communitheme snap
   #   command: snap install communitheme
   become: true
-  become_user: milnejam

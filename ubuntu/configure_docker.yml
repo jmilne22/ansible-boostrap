@@ -1,9 +1,9 @@
 --- # Configure Docker, add user to docker group
 - hosts: computers
-  become: yes
   tasks:
   - name: Add $USER to docker group
     user: $USER
     apped: yes
     group: docker
-
+    
+  become: yes

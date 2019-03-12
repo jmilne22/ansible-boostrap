@@ -12,5 +12,4 @@
             - vim
             - gcc
             - build-essential
-    become: true
-    become_user: milnejam
+  become: yes
