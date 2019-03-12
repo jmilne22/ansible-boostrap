@@ -1,0 +1,15 @@
+--- # Add PPA'
+- hosts: computers
+  tasks:
+  - name: Install ppa's
+    apt_repository:
+        repo: "{{ item }}"
+    vars:
+    loop:
+      - ppa:papirus/papirus
+      - ppa:tista/adapta
+      - ppa:agornostal/ulauncher
+  - name: Update Cache
+    apt:
+      update_cache: yes
+  become: yes

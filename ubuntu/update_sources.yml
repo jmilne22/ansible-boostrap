@@ -5,6 +5,7 @@
     apt_repository:
         repo: "{{ item }}"
         state: present
+        
     loop:
      - deb http://ppa.launchpad.net/papirus/papirus/ubuntu bionic main
      - deb http://ppa.launchpad.net/tista/adapta/ubuntu bionic main
@@ -14,4 +15,11 @@
      - deb http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic main
      - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
      - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+     
+  - name: Update Ubuntu cache
+    apt:
+      upgrade: dist
+      update_cache: yes
+      cache_valid_time: 86400
+
     become: true

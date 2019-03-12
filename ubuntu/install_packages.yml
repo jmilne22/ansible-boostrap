@@ -24,7 +24,4 @@
           - telegram-desktop
           - papirus-icon-theme
           - nordvpn
-
-  # - name: Install communitheme snap
-  #   command: snap install communitheme
   become: true
