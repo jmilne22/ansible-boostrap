@@ -12,4 +12,5 @@
             - vim
             - gcc
             - build-essential
+            - tree
   become: yes
