@@ -8,9 +8,7 @@
     loop:
       - https://discordapp.com/api/download?platform=linux&format=deb
       - https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.7-amd64.deb
-      - https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
-      - https://github.com/meetfranz/franz/releases/download/v5.0.0/franz_5.0.0_amd64.deb
+      - https://downloads.slack-edge.com/linux_releases/slack-desktop-3.4.0-amd64.deb
       - https://go.microsoft.com/fwlink/?LinkID=760868
   - name: Update cache
     apt:
