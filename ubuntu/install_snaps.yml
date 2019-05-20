@@ -1,0 +1,8 @@
+--- # Install snap packages
+- hosts: computers
+  tasks:
+  - name: Install Snaps
+    snap:
+      name:
+        - spotify
+  become: yes
