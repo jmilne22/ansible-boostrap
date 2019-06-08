@@ -10,6 +10,7 @@
         - vim 
         - gcc
         - tree
-        - gnomee-tweak-tool
+        - gnome-tweak-tool
+        - fedora-workstation-repositories
     state: latest
   become: yes
