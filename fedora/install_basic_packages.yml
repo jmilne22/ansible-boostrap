@@ -1,4 +1,4 @@
---- # Install basic packages, pretyt much required for the system function
+--- # Install basic packages, pretty much required for the system function
 - hosts: computers
   tasks:
   - name: Install basic packages needed for the system to function
@@ -10,5 +10,6 @@
         - vim 
         - gcc
         - tree
+        - gnomee-tweak-tool
     state: latest
   become: yes

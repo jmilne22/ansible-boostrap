@@ -1,0 +1,11 @@
+--- # Install RPM Packages for fedora, 
+- hosts: computers
+  tasks:
+  - name: Install RPM Packages for fedora.
+    dnf:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - https://github.com/Ulauncher/Ulauncher/releases/download/4.4.0.r1/ulauncher_4.4.0.r1_fedora.rpm
+      - nautilus-dropbox
+      - https://downloads.slack-edge.com/linux_releases/slack-3.4.2-0.1.fc21.x86_64.rpm
