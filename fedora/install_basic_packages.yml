@@ -1,0 +1,14 @@
+--- # Install basic packages, pretyt much required for the system to azure_rm_function
+- hosts: computers
+  tasks:
+  - name: Install basic packages needed for the system to function
+    dnf:
+      name:
+        - curl
+        - git
+        - tree
+        - vim 
+        - gcc
+        - tree
+    state: latest
+  become: yes
