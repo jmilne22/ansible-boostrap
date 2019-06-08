@@ -1,0 +1,18 @@
+--- # Install video codecs so the internet works, because fedora
+- hosts: computers
+  tasks:
+  - name: Install basic packages needed for the system to function
+    dnf:
+      name:
+        - gstreamer-plugins-base
+        - gstreamer1-plugins-base
+        - gstreamer-plugins-bad
+        - gstreamer-plugins-ugly
+        - gstreamer-plugins-good-extras
+        - gstreamer1-plugins-good
+        - gstreamer1-plugins-good-extras
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer-ffmpeg
+        - ffmpeg
+    state: latest
+  become: yes
