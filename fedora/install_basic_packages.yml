@@ -1,4 +1,4 @@
---- # Install basic packages, pretyt much required for the system to azure_rm_function
+--- # Install basic packages, pretyt much required for the system function
 - hosts: computers
   tasks:
   - name: Install basic packages needed for the system to function
