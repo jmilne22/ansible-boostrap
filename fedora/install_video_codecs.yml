@@ -14,5 +14,5 @@
         - gstreamer1-plugins-bad-freeworld
         - gstreamer-ffmpeg
         - ffmpeg
-    state: latest
+      state: latest
   become: yes
