@@ -1,5 +1,5 @@
 --- # Update fedora system, essentially does dnf update
-- hosts: comptuers
+- hosts: computers
   tasks:
   - name: Update Fedora System
     dnf:
