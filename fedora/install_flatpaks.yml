@@ -7,6 +7,6 @@
       state: present
       method: user
     with_items:
-      - https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+      - https://flathub.org/repo/appstream/com.spotify.Client.flatpakref
       - https://flathub.org/repo/appstream/com.discordapp.Discord.flatpakref
       - https://flathub.org/repo/appstream/com.visualstudio.code.flatpakref
