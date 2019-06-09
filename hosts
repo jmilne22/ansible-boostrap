@@ -1,2 +1,2 @@
 [computers]
-computer ansible_host=192.168.0.26
+computer ansible_connection=local
