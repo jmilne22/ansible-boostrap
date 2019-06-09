@@ -4,7 +4,7 @@
 
 - import_playbook: fedora/update_servers.yml
 - import_playbook: fedora/install_basic_packages.yml
-- import_plabyook: fedora/install_video_codecs.yml
+- import_playbook: fedora/install_video_codecs.yml
 - import_playbook: fedora/rpm_fusion_setup.yml
 - import_playbook: install_rpms.yml
 - import_playbook: install_flatpaks.yml
