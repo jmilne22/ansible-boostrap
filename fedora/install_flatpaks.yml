@@ -1,4 +1,4 @@
-# Install RPM Packages for fedora
+# Install FlatPaks for fedora.
 - hosts: computers
   tasks:
   - name: Install Flatpaks for fedora
