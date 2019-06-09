@@ -1,8 +1,5 @@
 --- # Update fedora system, essentially does dnf update
 - hosts: computers
-
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
   tasks:
   - name: Update Fedora System
     dnf:
