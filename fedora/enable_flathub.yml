@@ -1,8 +1,9 @@
 # Enable Flathub repo for flatpak installation
 - hosts: computers
   tasks:
-  - name: Add the Gnome flatpak remote to the system installation
+  - name: Add the flathub flatpak repository remote to the user installation
   flatpak_remote:
-    name: gnome
+    name: flathub
     state: present
-    flatpakrepo_url: https://sdk.gnome.org/gnome-apps.flatpakrepo
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
