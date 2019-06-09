@@ -1,5 +1,2 @@
 [computers]
-computer ansible_connection=local
-
-[py3-hosts:vars]
-ansible_python_interpreter=/usr/bin/python3
+computer ansible_connection=local ansible_python_interpreter=/usr/bin/python3
