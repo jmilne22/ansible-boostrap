@@ -13,5 +13,5 @@
         - gnome-tweak-tool
         - fedora-workstation-repositories
         - snapd
-    state: latest
+      state: latest
   become: yes
