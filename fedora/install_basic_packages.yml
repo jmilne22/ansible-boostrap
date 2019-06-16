@@ -13,5 +13,7 @@
         - gnome-tweak-tool
         - fedora-workstation-repositories
         - snapd
+        - zsh
+        - powerline-fonts
       state: latest
   become: yes
