@@ -1,0 +1,27 @@
+--- # Installs docker on a fedora hosts
+- hosts: computers
+  tasks:
+  - name: Remove existing docker packages if needed
+    dnf:
+      name: "{{ item }}"
+      state: abscent
+    with_items:
+      - docker
+      - docker-common
+      - container-selinux
+      -  docker-selinux
+
+  - name: Add Docker Repo
+    shell:  'dnf config-manager \
+      --add-repo \
+      https://download.docker.com/linux/fedora/docker-ce.repo'
+
+  - name: Update dnf package index
+    dnf:
+      name: docker-engine
+      state: latest
+  
+  - name: Start docker service
+    systemd:
+      state: started
+      name: docker
